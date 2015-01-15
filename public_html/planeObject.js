@@ -115,6 +115,7 @@ var planeObject = {
 
 			return {
                 strokeWeight: (this.is_selected ? 2 : 1),
+		strokeColor: (this.is_selected ? '#5BC0DE' :'#1C371C'),
                 path:  "M 0,0 "+ baseSvg["planeData"],
                 scale: 0.4,
                 fillColor: this.markerColor,
@@ -248,7 +249,7 @@ var planeObject = {
 				path.push(new google.maps.LatLng(this.latitude, this.longitude));
 			} else {
 				this.line = new google.maps.Polyline({
-					strokeColor: '#000000',
+					strokeColor: '#5BC0DE',
 					strokeOpacity: 1.0,
 					strokeWeight: 3,
 					map: GoogleMap,
