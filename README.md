@@ -22,8 +22,39 @@ The main features are:
 * TCP server streaming and recceiving raw data to/from connected clients
   (using --net).
 
-Installation
+Installation of RTL-SDR
 ---
+
+Install RTL-SDR
+http://zr6aic.blogspot.com.au/2013/02/setting-up-my-raspberry-pi-as-sdr-server.html
+
+sudo apt-get update
+
+Now install the required utils to compile the RTL-2832U USB dongle driver
+
+sudo apt-get install git 
+sudo apt-get install cmake
+sudo apt-get install libusb-1.0-0.dev
+sudo apt-get install build-essential
+
+Now install the RTL-2832U USB dongle driver src and compile
+
+git clone git://git.osmocom.org/rtl-sdr.git
+cd rtl-sdr/
+mkdir build
+cd build
+cmake ../
+make
+sudo make install
+sudo ldconfig
+
+
+Installation of Dump109
+---
+
+Clone repository
+
+cd dump1090
 
 Type "make".
 
