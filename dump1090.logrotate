@@ -1,0 +1,10 @@
+/home/pi/dump1090/screenlog.0 {
+	copytruncate
+	compress
+	rotate 7
+	daily
+	compress
+	missingok
+	notifempty	
+}
+

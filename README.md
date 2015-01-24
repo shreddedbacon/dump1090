@@ -59,7 +59,10 @@ cd dump1090
 Type "make".
 
 Put the file dump into /etc/init.d
+
 update-rc.d dump defaults
+
+Modify dump1090.logrotate and put it into /etc/logrotate.d/
 
 Normal usage
 ---
