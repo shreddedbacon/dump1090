@@ -52,6 +52,8 @@ sudo ldconfig
 Installation of Dump109
 ---
 
+sudo apt-get install screen
+
 Clone repository
 
 cd dump1090
@@ -59,10 +61,12 @@ cd dump1090
 Type "make".
 
 Put the file dump into /etc/init.d
-
-update-rc.d dump defaults
+	sudo cp dump /etc/init.d/.
+	sudo chmod +x /etc/init.d/dump
+	sudo update-rc.d dump defaults
 
 Modify dump1090.logrotate and put it into /etc/logrotate.d/
+	sudo cp dump1090.logrotate /etc/logrotdate.d/.
 
 Normal usage
 ---
