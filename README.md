@@ -52,14 +52,12 @@ sudo ldconfig
 
 Installation of Dump109
 ---
-
+```
 sudo apt-get install screen
-
-Clone repository
-
+git clone https://github.com/shreddedbacon/dump1090.git
 cd dump1090
-
-Type "make".
+make
+```
 
 Put the file dump into /etc/init.d
 ```
