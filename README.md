@@ -71,6 +71,19 @@ Modify dump1090.logrotate and put it into /etc/logrotate.d/
 sudo cp dump1090.logrotate /etc/logrotate.d/.
 ```
 
+Add new udev rule for SDR
+```
+lsusb
+```
+The last line was the Realtek dongle:
+Bus 001 Device 008: ID 0bda:2838 Realtek Semiconductor Corp.
+
+```
+sudo nano /etc/udev/rules.d/20.rtlsdr.rules
+```
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838", GROUP="adm", MODE="0666", SYMLINK+="rtl_sdr"
+
+
 Normal usage
 ---
 
