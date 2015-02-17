@@ -63,14 +63,14 @@ Type "make".
 
 Put the file dump into /etc/init.d
 ```
-	sudo cp dump /etc/init.d/.
-	sudo chmod +x /etc/init.d/dump
-	sudo update-rc.d dump defaults
+sudo cp dump /etc/init.d/.
+sudo chmod +x /etc/init.d/dump
+sudo update-rc.d dump defaults
 ```
 
 Modify dump1090.logrotate and put it into /etc/logrotate.d/
 ```
-	sudo cp dump1090.logrotate /etc/logrotdate.d/.
+sudo cp dump1090.logrotate /etc/logrotdate.d/.
 ```
 
 Normal usage
