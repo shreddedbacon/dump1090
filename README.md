@@ -31,14 +31,15 @@ http://zr6aic.blogspot.com.au/2013/02/setting-up-my-raspberry-pi-as-sdr-server.h
 sudo apt-get update
 
 Now install the required utils to compile the RTL-2832U USB dongle driver
-
+```
 sudo apt-get install git 
 sudo apt-get install cmake
 sudo apt-get install libusb-1.0-0.dev
 sudo apt-get install build-essential
+```
 
 Now install the RTL-2832U USB dongle driver src and compile
-
+```
 git clone git://git.osmocom.org/rtl-sdr.git
 cd rtl-sdr/
 mkdir build
@@ -47,7 +48,7 @@ cmake ../
 make
 sudo make install
 sudo ldconfig
-
+```
 
 Installation of Dump109
 ---
@@ -61,12 +62,16 @@ cd dump1090
 Type "make".
 
 Put the file dump into /etc/init.d
+```
 	sudo cp dump /etc/init.d/.
 	sudo chmod +x /etc/init.d/dump
 	sudo update-rc.d dump defaults
+```
 
 Modify dump1090.logrotate and put it into /etc/logrotate.d/
+```
 	sudo cp dump1090.logrotate /etc/logrotdate.d/.
+```
 
 Normal usage
 ---
