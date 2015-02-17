@@ -70,7 +70,7 @@ sudo update-rc.d dump defaults
 
 Modify dump1090.logrotate and put it into /etc/logrotate.d/
 ```
-sudo cp dump1090.logrotate /etc/logrotdate.d/.
+sudo cp dump1090.logrotate /etc/logrotate.d/.
 ```
 
 Normal usage
