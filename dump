@@ -11,7 +11,8 @@
 ### END INIT INFO
 
 DUMP1090=/home/pi/dump1090
-OPTS="--net"
+DUMP1090HTTP=80
+OPTS="--net --net-http-port ${DUMP1090HTTP}"
 
 case "$1" in
 start)	cd $DUMP1090
